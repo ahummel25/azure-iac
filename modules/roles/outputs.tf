@@ -3,14 +3,24 @@ output "id" {
   value       = data.azurerm_role_definition.owner.id
 }
 
-output "description" {
+output "owner_description" {
   description = "The Description of the built-in Role."
   value       = data.azurerm_role_definition.owner.description
+}
+
+output "owner_id" {
+  description = "The ID of the built-in Role."
+  value       = data.azurerm_role_definition.owner.id
 }
 
 output "principal_type" {
   description = "The principal_type."
   value       = azurerm_role_assignment.owner_assignment.principal_type
+}
+
+output "subscription" {
+  description = "The subscription"
+  value       = data.azurerm_subscription.primary.id
 }
 
 output "type" {
